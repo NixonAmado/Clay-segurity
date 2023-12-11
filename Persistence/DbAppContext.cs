@@ -20,11 +20,11 @@ public class DbAppContext: DbContext
     public DbSet<Departamento> Departamentos  {get;set;}
     public DbSet<Direccion> Direcciones  {get;set;}
     public DbSet<Estado> Estados  {get;set;}
-    public DbSet<Pais> Paiss  {get;set;}
+    public DbSet<Pais> Paises  {get;set;}
     public DbSet<Persona> Personas  {get;set;}
     public DbSet<Programacion> Programaciones  {get;set;}
     public DbSet<TipoContacto> TipoContactos  {get;set;}
-    public DbSet<TipoDireccion> TipoDireccionEs  {get;set;}
+    public DbSet<TipoDireccion> TipoDirecciones  {get;set;}
     public DbSet<TipoPersona> TipoPersonas  {get;set;}
     public DbSet<Turno> Turnos  {get;set;}
 
