@@ -13,6 +13,22 @@ public class DbAppContext: DbContext
     public DbSet<Role> Roles{get;set;}
     public DbSet<User> Users {get;set;}
     public DbSet<UserRole> UsersRoles {get;set;}
+    public DbSet<CategoriaPersona> CategoriaPersonas  {get;set;}
+    public DbSet<Ciudad> Ciudades  {get;set;}
+    public DbSet<ContactoPersona> Contactos  {get;set;}
+    public DbSet<Contrato> Contratos  {get;set;}
+    public DbSet<Departamento> Departamentos  {get;set;}
+    public DbSet<Direccion> Direcciones  {get;set;}
+    public DbSet<Estado> Estados  {get;set;}
+    public DbSet<Pais> Paiss  {get;set;}
+    public DbSet<Persona> Personas  {get;set;}
+    public DbSet<Programacion> Programaciones  {get;set;}
+    public DbSet<TipoContacto> TipoContactos  {get;set;}
+    public DbSet<TipoDireccion> TipoDireccionEs  {get;set;}
+    public DbSet<TipoPersona> TipoPersonas  {get;set;}
+    public DbSet<Turno> Turnos  {get;set;}
+
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
