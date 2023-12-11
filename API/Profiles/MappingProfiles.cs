@@ -26,7 +26,7 @@ public class MappingProfiles : Profile
         CreateMap<G_ProgramacionDto, Programacion>().ReverseMap();
         CreateMap<G_TipoContactoDto, TipoContacto>().ReverseMap();
         CreateMap<G_TipoDireccionDto, TipoDireccion>().ReverseMap();
-        CreateMap<G_TipoPersona, TipoPersona>().ReverseMap();
+        CreateMap<G_TipoPersonaDto, TipoPersona>().ReverseMap();
         CreateMap<G_TurnoDto, Turno>().ReverseMap();
 
 
