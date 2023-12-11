@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 namespace Domain.Entities
 {
     public class Contrato : BaseEntity
-    {
-        public string IdCliente { get; set; }        
+    {    
         public DateTime FechaContrato { get; set; }
         public DateTime FechaFin { get; set; }
         public int Cliente_id { get; set; }

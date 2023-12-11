@@ -14,7 +14,7 @@ namespace Domain.Interfaces
         public IContactoPersona Contactos {get;}
         public IContrato Contratos {get;}
         public IDepartamento Departamentos {get;}
-        public IDireccione Direcciones {get;}
+        public IDireccion Direcciones {get;}
         public IEstado Estados {get;}
         public IPais Paises {get;}
         public IPersona Personas {get;}
