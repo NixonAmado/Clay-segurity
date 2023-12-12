@@ -30,7 +30,7 @@ class PersonaConfiguration:IEntityTypeConfiguration<Persona>
 
         builder.HasOne(p => p.CPersonaNavigation)
             .WithMany(p => p.Personas)
-            .HasForeignKey(p => p.CategoriaPersona_id);
+            .HasForeignKey(p => p.CategoriaPersona_id);  
 
         builder.HasOne(p => p.CiudadNavigation)
             .WithMany(p => p.Personas)

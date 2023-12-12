@@ -8,3 +8,11 @@ public class G_contratoDto
     public int Estado_id { get; set; }
 
 }
+
+public class ContratoEstadoDto
+{
+    public int Id { get; set; }
+    public string Cliente {get;set;}
+    public string Empleado { get; set; }
+
+}

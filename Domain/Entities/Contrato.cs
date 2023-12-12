@@ -11,7 +11,6 @@ namespace Domain.Entities
         public DateTime FechaFin { get; set; }
         public int Cliente_id { get; set; }
         public virtual Persona ClienteNavigation { get; set; }
-        public int Empleado_id { get; set; }
         public virtual Persona EmpleadoNavigation { get; set; }
         public int Estado_id { get; set; }
         public virtual Estado EstadoNavigation { get; set; }

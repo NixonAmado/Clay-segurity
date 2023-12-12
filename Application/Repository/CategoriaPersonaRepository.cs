@@ -1,7 +1,6 @@
 using Domain.Entities;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Persistence.Data;
 using Persistencia.Data;
 
 

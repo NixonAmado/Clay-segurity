@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cVzavxUAO1+MVBNv4THgOhUoG9uXhv3ZT06HgBd1CAdIDoUaNKhhyx+75qNnjAAeM3iprAiZLCn9EGOIoGaS2Q==",
+  "dgSpecHash": "LZthmQcCNBjk54xF432KkPXATYAbR8R7gvsVcpQwJNSSkhBrJ2MZupKkBja3hK3SdgTT9WMiKs+xRpnZAIzsYA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Documents\\Nixon\\EsqueletoBackEnd\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -95,10 +95,7 @@
     "C:\\Users\\user\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.threading.threadpool\\4.3.0\\system.threading.threadpool.4.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

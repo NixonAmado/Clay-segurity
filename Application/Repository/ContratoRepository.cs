@@ -15,7 +15,18 @@ namespace Application.Repository;
         {
             _context = context;
         }
-          public override async Task<(int totalRegistros, IEnumerable<Contrato> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
+        //7) Listar Todos los contratos cuyo estado es activo. Se debe mostrar el Nro de contrato el nombre del cliente y el empleado que registro el contrato.
+        public async Task<IEnumerable<Contrato>> GetContractByStatus()
+        {
+            return await _context.Contratos 
+                            .Include(c => c.ClienteNavigation)
+                            .Include(c => c.EmpleadoNavigation)
+                            .Where(p => p.EstadoNavigation.Descripcion.ToUpper() == "ACTIVO")
+                            .ToListAsync();
+        }
+         
+         
+        public override async Task<(int totalRegistros, IEnumerable<Contrato> registros)> GetAllAsync(int pageIndex, int pageSize, string search)
             {
                 var query = _context.Contratos as IQueryable<Contrato>;
     

@@ -12,19 +12,16 @@ class ContratoConfiguration:IEntityTypeConfiguration<Contrato>
         builder.ToTable("Contrato");
         builder.Property(p => p.FechaContrato)
         .IsRequired()
-        .HasMaxLength(60);
+        .HasColumnType("DATETIME");
 
         builder.Property(p => p.FechaFin)
         .IsRequired()
-        .HasMaxLength(60);
+        .HasColumnType("DATETIME");
 
         builder.HasOne(p => p.ClienteNavigation)
         .WithMany(p => p.Contratos)
         .HasForeignKey(p => p.Cliente_id);  
 
-        builder.HasOne(p => p.EmpleadoNavigation)
-        .WithMany(p => p.Contratos)
-        .HasForeignKey(p => p.Empleado_id); 
 
         builder.HasOne(p => p.EstadoNavigation)
         .WithMany(p => p.Contratos)

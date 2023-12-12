@@ -19,7 +19,63 @@ public class PersonaController : BaseApiController
         _mapper = mapper;
         _unitOfWork = unitOfWork;
     }
-    
+
+
+    [HttpGet("GetCustomersByantiquity/{quantity}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TPersonaDto>>> GetCustomersByantiquity(int quantity)
+    {
+        var Personas = await _unitOfWork.Personas.GetCustomersByantiquity(quantity);
+        return _mapper.Map<List<TPersonaDto>>(Personas);
+    }
+
+
+    [HttpGet("GetCustomersByDirection/{direction1}/{direction2}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TPersonaDto>>> GetCustomersByDirection(string direction1, string direction2)
+    {
+        var Personas = await _unitOfWork.Personas.GetCustomersByDirection(direction1, direction2);
+        return _mapper.Map<List<TPersonaDto>>(Personas);
+    }
+
+    [HttpGet("GetCustomersByCity/{city}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TPersonaDto>>> GetCustomersByCity(string city)
+    {
+        var Personas = await _unitOfWork.Personas.GetCustomersByCity(city);
+        return _mapper.Map<List<TPersonaDto>>(Personas);
+    }
+
+    [HttpGet("GetAllPhoneNumEmployeeByCategory/{category}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<PersonaNumerosDto>>> GetAllPhoneNumEmployeeByCategory(string category)
+    {
+        var Personas = await _unitOfWork.Personas.GetAllPhoneNumEmployeeByCategory(category);
+        return _mapper.Map<List<PersonaNumerosDto>>(Personas);
+    }
+
+    [HttpGet("GetAllEmployeebyCategory/{category}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TPersonaDto>>> GetAllEmployeebyCategory(string category)
+    {
+        var Personas = await _unitOfWork.Personas.GetAllEmployeebyCategory(category);
+        return _mapper.Map<List<TPersonaDto>>(Personas);
+    }
+
+    [HttpGet("GetAllEmployeeFromCompany")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TPersonaDto>>> GetAllEmployeeFromCompany()
+    {
+        var Personas = await _unitOfWork.Personas.GetAllEmployeeFromCompany();
+        return _mapper.Map<List<TPersonaDto>>(Personas);
+    }
+
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]

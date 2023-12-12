@@ -11,9 +11,7 @@ public class MappingProfiles : Profile
         //CreateMap<Role, RoleDto>().ReverseMap();
         //CreateMap<PersonType, TypePDto>().ReverseMap();
         // CreateMap<Pet, FullPetDto>().ReverseMap();
-        // CreateMap<Pet, PetStatDto>()
-        // .ForMember(e => e.Breed, op => op.MapFrom(e => e.Breed.Name))
-        // .ForMember(e => e.Species, op => op.MapFrom(e => e.Species.Name))
+                  //.ForMember(e => e.Species, op => op.MapFrom(e => e.Species.Name))
         CreateMap<G_CategoriaPersonaDto, CategoriaPersona>().ReverseMap();
         CreateMap<G_CiudadDto, Ciudad>().ReverseMap();
         CreateMap<G_contactoPersonaDto, ContactoPersona>().ReverseMap();
@@ -27,7 +25,17 @@ public class MappingProfiles : Profile
         CreateMap<G_TipoContactoDto, TipoContacto>().ReverseMap();
         CreateMap<G_TipoDireccionDto, TipoDireccion>().ReverseMap();
         CreateMap<G_TipoPersonaDto, TipoPersona>().ReverseMap();
+        CreateMap<PersonaNumerosDto, Persona>().ReverseMap();
+
+
         CreateMap<G_TurnoDto, Turno>().ReverseMap();
+        CreateMap<Persona, TPersonaDto>()
+           .ForMember(e => e.TipoPersona, op => op.MapFrom(e => e.TPersonaNavigation.Descripcion)).ReverseMap();
+
+        CreateMap<Contrato, ContratoEstadoDto>()
+           .ForMember(e => e.Cliente, op => op.MapFrom(e => e.ClienteNavigation.Nombre))
+           .ForMember(e => e.Empleado, op => op.MapFrom(e => e.EmpleadoNavigation.Nombre))
+           .ReverseMap();
 
 
 

@@ -28,6 +28,15 @@ public class ContratoController : BaseApiController
         var Contratos = await _unitOfWork.Contratos.GetAllAsync();
         return _mapper.Map<List<G_contratoDto>>(Contratos);
     }
+    
+    [HttpGet("GetContractByStatus")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<ContratoEstadoDto>>> GetContractByStatus()
+    {
+        var Contratos = await _unitOfWork.Contratos.GetContractByStatus();
+        return _mapper.Map<List<ContratoEstadoDto>>(Contratos);
+    }
 
     [HttpGet]
     [ApiVersion("1.1")]
